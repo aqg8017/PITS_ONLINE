@@ -15,7 +15,7 @@ def main():
         api_key = st.text_input("Enter your OpenAI API Key (or leave blank if running locally): ")
         st.session_state['OPENAI_API_KEY'] = api_key
         os.environ['OPENAI_API_KEY'] = api_key
-        print(os.environ['OPENAI_API_KEY'])
+    st.markdown(os.environ['OPENAI_API_KEY'])
     
     # Check if the user is returning and has opted to take a quiz
     if 'show_quiz' in st.session_state and st.session_state['show_quiz']:
