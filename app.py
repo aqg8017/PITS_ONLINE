@@ -11,7 +11,7 @@ def main():
     st.sidebar.title('P.I.T.S.')
     st.sidebar.markdown('### Your Personalized Intelligent Tutoring System')
 
-    if 'OPENAI_API_KEY' not in st.session_state:
+   if 'OPENAI_API_KEY' not in st.session_state or not st.session_state['OPENAI_API_KEY']:
         api_key = st.text_input("Enter your OpenAI API Key (or leave blank if running locally): ")
         st.session_state['OPENAI_API_KEY'] = api_key
         os.environ['OPENAI_API_KEY'] = api_key
